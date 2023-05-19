@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+body {
+  background-color: #f0f9f4;
+  font-family: 'Roboto+Condensed', sans-serif;
+}
+
+form {
+  background-color: #f0f9f4;
+  margin-left: 40px;
+  padding: 15px;
+}
+
+input[type='text'] {
+  margin-left: 30rem;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #7bccc1;
+  border-radius: 5px;
+  justify-content: center;
+  color: #0b1d12;
+  background-color: #7bccc1;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid #7bccc1;
+  border-radius: 5px;
+  background-color: #7bccc1;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #0b1d12;
+}
+
+button:hover {
+  background-color: #deebf2;
+}
+
+.results_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.results {
+  background-color: #3f7da2;
+  color: #0b1d12;
+  padding-left: 2px;
+  padding-top: 2px;
+  text-align: center;
+  display: grid;
+  border-radius: 14px;
+  margin: 15px;
+  flex-basis: 30%;
+  font-weight: 400;
+}
+
+.results .links {
+  text-decoration: none;
+}
+
+.total {
+  color: #0b1d12;
+  text-align: center;
+}
