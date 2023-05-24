@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react';
 import '../App.css'
 
 const SearchBar = () => {
-    const [query, setQuery] = useState('');
+    const [country, setCountry] = useState('');
     const [data, setData] = useState([]);
 
     const handleChange = (event) => {
-        setQuery(event.target.value)
-            // (e) => setQuery(e.target.value)
+        setCountry(event.target.value)
+            // (e) => setCountry(e.target.value)/
     }
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://universities.hipolabs.com/search?country=${query}`);
+                const response = await fetch(`http://universities.hipolabs.com/search?country=${country}`);
                 const jsonData = await response.json();
                 setData(jsonData);
             } catch (error) {
@@ -21,10 +21,10 @@ const SearchBar = () => {
             }
         };
 
-        if (query) {
+        if (country) {
             fetchData();
         }
-    }, [query]);
+    }, [country]);
 
     const handleSearch = (e) => {
         e.preventDefault()
@@ -34,7 +34,7 @@ const SearchBar = () => {
     return (
         <div>
             <form>
-                <input type="text" value={query} onChange={handleChange} />
+                <input type="text" value={country} onChange={handleChange} />
                 <button onClick={handleSearch}>Search</button>
             </form>
             <p className='total'>Total universities found: {data.length}</p>
